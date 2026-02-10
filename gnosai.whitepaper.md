@@ -36,13 +36,13 @@ Gnos.ai is built on a modular, scalable architecture leveraging AI, blockchain, 
 - **Input/Output Handling**: Users upload pure AI-generated tracks or use platform tools. All uploads are verified for AI origin to maintain platform integrity.
 
 ### 3.3 Backend Services
-- **API Layer**: RESTful and GraphQL APIs for user authentication, content management, and real-time updates using Node.js and Express.
+- **API Layer**: RESTful and GraphQL APIs for user authentication, content management, and real-time updates.
 - **Database**: Hybrid setup with PostgreSQL for structured data (user profiles, song metadata) and MongoDB for unstructured (comments, feeds).
 - **AI Processing**: Cloud-based GPUs for on-demand music generation, integrated with services like AWS SageMaker or custom ML pipelines.
 - **Social Features**: Feed algorithms prioritizing user engagement, AI-recommended collaborations, and community events.
 
 ### 3.4 Blockchain Integration
-Gnos.ai's blockchain layer is fully deployed on **FullOn Network**, a high-performance Layer-1 blockchain designed for Web3 and AI ecosystems. FullOn achieves near-unlimited scalability through its unique 2D-Sharding and dual-chain architecture, while maintaining low latency and high TPS (target exceeding 1 million TPS). This perfectly matches the real-time needs of music generation, NFT minting, instant revenue distribution, and high-concurrency social features.
+Gnos.ai's blockchain layer is fully deployed on **FullOn Network**, a high-performance Layer-1 blockchain designed for Web3 and AI ecosystems. FullOn achieves near-unlimited scalability through its unique 2D-Sharding and modular architecture, while maintaining low latency and high TPS (target exceeding 1 million TPS). This perfectly matches the real-time needs of music generation, NFT minting, instant revenue distribution, and high-concurrency social features.
 
 - **Why FullOn Network**:
   - **High Performance & Low Latency**: Multi-threaded + multi-sharding ensures near-instant song uploads, NFT minting, and TBA (ERC-6551 standard) account revenue settlement, delivering near Web2 user experience.
