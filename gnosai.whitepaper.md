@@ -151,6 +151,11 @@ The release curve promotes long-term alignment with gradual supply increase and 
 | 15      | 2,625,000,000 | 1,260,000,000 | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 7,645,000,000     |
 | 16      | 2,800,000,000 | 1,440,000,000 | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 8,000,000,000     |
 
+<div>
+<img src="./assets/gnos_circulating_schedule.png" width=80%> <br>
+Figure-1: GNOS Circulating Schedule
+</div>
+
 ### CISUM Points System
 - **Non-Transferable Utility Token**: Earned through daily platform activities.
 - **Earning Mechanisms**:
