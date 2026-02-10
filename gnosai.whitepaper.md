@@ -1,4 +1,4 @@
-# Gnos.ai Whitepaper
+# Gnos.ai Whitepaper `v0.1.0`
 
 ## Abstract
 
@@ -45,7 +45,7 @@ Gnos.ai is built on a modular, scalable architecture leveraging AI, blockchain, 
 Gnos.ai's blockchain layer is fully deployed on **FullOn Network**, a high-performance Layer-1 blockchain designed for Web3 and AI ecosystems. FullOn achieves near-unlimited scalability through its unique 2D-Sharding and dual-chain architecture, while maintaining low latency and high TPS (target exceeding 1 million TPS). This perfectly matches the real-time needs of music generation, NFT minting, instant revenue distribution, and high-concurrency social features.
 
 - **Why FullOn Network**:
-  - **High Performance & Low Latency**: Multi-threaded + multi-sharding ensures near-instant song uploads, NFT minting, and TBA account revenue settlement, delivering near Web2 user experience.
+  - **High Performance & Low Latency**: Multi-threaded + multi-sharding ensures near-instant song uploads, NFT minting, and TBA (ERC-6551 standard) account revenue settlement, delivering near Web2 user experience.
   - **Ultra-Low Fees**: Extremely low gas costs (far below Ethereum mainnet and most L2s), ideal for micro-transactions such as point redemptions, frequent listening rewards, and virtual singer cultivation.
   - **Multi-Chain Interoperability**: Native support for cross-chain bridges and interoperability protocols, allowing seamless interaction via mainstream wallets (MetaMask, WalletConnect, HuFu Wallet, etc.). Assets can be bridged to Ethereum, Solana, and other ecosystems for broader liquidity.
   - **AI-Friendly**: Optimized for Web3 + AI scenarios, supporting efficient on-chain storage and computation for AI Agent data, enabling long-term virtual singer TBA NFT cultivation and revenue tracking.
@@ -72,9 +72,9 @@ Gnos.ai introduces an advanced AI Agent system that allows users to personally c
 - **Core Mechanisms**:
   - **Personalized Cultivation**: Users build virtual singers from scratch or preset templates through the AI Agent tool, defining music style, vocal characteristics, visual appearance, and backstory. Iterative training via prompts, sample uploads, and feedback refines the singer over time.
   - **Social Interaction**: Virtual singers can post updates, collaborate on duets, and respond to user comments for immersive engagement.
-  - **TBA NFT Issuance**: Mature virtual singers can be minted as TBA NFTs (ERC-6551 standard). The NFT owns an independent on-chain wallet (Token Bound Account) that holds and receives revenue.
+  - **TBA NFT Issuance**: Mature virtual singers can be minted as TBA NFTs. The NFT owns an independent on-chain wallet (Token Bound Account) that holds and receives revenue.
     - **NFT Types**: ERC-721 (unique) or ERC-1155 (limited editions).
-    - **Minting**: Small GNOS or CISUM fee; metadata includes singer profile, voice model, song history, and cultivation data (IPFS-stored).
+    - **Minting**: Small GNOS or CISUM fee; metadata includes singer profile, voice model, song history, and cultivation data (IPFS-stored content hash & other meta data).
 
 - **Revenue Mechanism**:
   - **Revenue Attribution**: All earnings from the virtual singer's songs, performances, or derivatives (ads, Top 100 fees, licensing) flow automatically to the TBA account.
@@ -115,7 +115,7 @@ These systems form Gnos.ai's intelligent core, driving quality, stickiness, and 
 ### GNOS Governance Token
 - **Total Supply**: 8,000,000,000 GNOS (ERC-20 compatible, deployed on FullOn Network mainnet).
 - **Distribution**:
-  - Community Rewards and Airdrops: 35% – For listening rewards, invitations, and CISUM conversions. Linear vesting over 4 years, prioritizing FullOn native users.
+  - Community Rewards and Airdrops: 35% – For Top 100 listening rewards, invitations, and CISUM conversions. Linear vesting over 4 years, prioritizing FullOn native users.
   - Team and Advisors: 18% – Locked 2 years, then quarterly vesting.
   - Liquidity and Exchanges: 20% – Deep pools on FullOn DEX and cross-chain LPs.
   - Ecosystem Development Fund: 18% – FullOn-specific grants (bridges, integrations, AI tools). DAO-governed.
@@ -167,9 +167,9 @@ The dual-token flywheel: CISUM drives daily engagement and micro-interactions; G
 
 To support FullOn Network deployment and ecosystem expansion, Gnos.ai adopts a staged fundraising approach targeting a total of $50 million across rounds, combining GNOS tokens and equity.
 
-- **Seed Round**: Target $10 million (2025 Q4). Investors receive 5% GNOS allocation (from ecosystem fund), 1-year lock. Funds for FullOn mainnet launch, AI verification, and wallet integrations.
-- **Series A**: Target $20 million (2026 Q2). Investors receive 8% GNOS (2-year vesting). Focus on mobile apps, cross-chain bridges, and marketing.
-- **Series B and Beyond**: Target $20 million+ (2027+). Remaining ecosystem fund allocation for global scaling, advanced TBA features, and cross-chain partnerships.
+- **Seed Round**: Target $10 million (2026 Q4). Investors receive 5% GNOS allocation (from ecosystem fund), 1-year lock. Funds for FullOn mainnet launch, AI verification, and wallet integrations.
+- **Series A**: Target $20 million (2027 Q4). Investors receive 8% GNOS (2-year vesting). Focus on mobile apps, cross-chain bridges, and marketing.
+- **Series B and Beyond**: Target $20 million+ (2028+). Remaining ecosystem fund allocation for global scaling, advanced TBA features, and cross-chain partnerships.
 
 - **Mechanisms**:
   - Early investor GNOS discounts (20-30%).
@@ -203,40 +203,10 @@ To support FullOn Network deployment and ecosystem expansion, Gnos.ai adopts a s
 - Consumption rebates in GNOS.
 - Staking GNOS for yield from platform revenue.
 
-## Team
-
-Gnos.ai is founded by an experienced cross-disciplinary team spanning AI, music tech, blockchain, product, and community building.
-
-### Core Team Members
-- **Ethan Chen – Co-founder & CEO**  
-  Former AI music strategy lead at a top music streaming platform; 10+ years in music tech and AI product commercialization.
-
-- **Luna Kim – Co-founder & CTO**  
-  Ex-technical lead of a prominent Web3 music NFT project; expert in Solidity, IPFS, distributed systems, and large-scale AI inference.
-
-- **Alex Rivera – Chief Music AI Scientist**  
-  Former Google Magenta and Meta AI music researcher; specialist in generative music models with publications in NeurIPS/ICML.
-
-- **Maya Wong – Chief Product Officer (CPO)**  
-  Ex-music vertical lead at a global short-video platform; expert in social product design and creator economy growth.
-
-- **Jordan Lee – Head of Community & Growth**  
-  Web3-native community expert; scaled multiple DeFi/NFT projects to millions of users.
-
-- **Sophia Grant – Legal & Compliance Advisor**  
-  Former international law firm partner specializing in Web3, NFTs, music copyright, and AI-generated content.
-
-### Advisory Board
-- Former global music label digital strategy executive.
-- Co-founder of a leading AI music startup.
-- Early core member of a major Layer-1 blockchain.
-- Multi-platform independent musician with millions of followers.
-
-The team operates in a remote + distributed model across Singapore, US West Coast, Seoul, and mainland China, with strong long-term incentives aligned to ecosystem success.
 
 ## Roadmap
 
-### 2025 Q4 – 2026 Q1  Genesis Phase
+### 2026 Q1 – 2026 Q2  Genesis Phase
 - Closed beta and creator invitation program.
 - Core AI music generation tool V1 launch.
 - GNOS token and core contracts deployed & audited on FullOn Network.
@@ -246,7 +216,7 @@ The team operates in a remote + distributed model across Singapore, US West Coas
 - Multi-chain wallet integration.
 - Seed round funding and FullOn deployment.
 
-### 2026 Q2 – 2026 Q4  Ignition Phase
+### 2026 Q3 – 2026 Q4  Ignition Phase
 - Public registration and mobile apps (iOS & Android) launch.
 - Top 100 paid preview mechanism (charge after 10 seconds).
 - Third-party platform syndication preparation.
