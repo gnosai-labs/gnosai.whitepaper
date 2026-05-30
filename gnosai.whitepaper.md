@@ -1,263 +1,203 @@
-# Gnos.ai Whitepaper `v0.1.0`
+以下是为您翻译的 Gnos.ai 白皮书 `v0.5.0` 英文版 Markdown 文本。翻译保留了全部结构、专业术语（如 SFT, ERC-6551, TBA, RWID 等）以及表格和图注格式。
 
-## Abstract
+---
 
-Gnos.ai is a revolutionary AI-powered music creation and social platform designed to democratize music production, distribution, and monetization. Inspired by the word "song" spelled backward as "gnos," the platform represents a disruptive shift in the music industry, empowering creators, listeners, and developers through AI tools, blockchain integration, and community-driven governance. Users can generate, upload, and share AI-created music, complete with custom cover images and lyric subtitles. The platform introduces a dual-token system: governance token GNOS (total supply: 8 billion) and utility points token CISUM for in-platform rewards and engagement. Creators earn through various streams including ads, NFTs, and licensing, while the platform sustains itself via fees and shared revenues. With 20% of platform revenues dedicated to buyback and burn of GNOS, Gnos.ai ensures long-term value appreciation and ecosystem sustainability.
+# Gnos.ai Whitepaper `v0.5.0`
 
-This whitepaper outlines the platform's vision, architecture, tokenomics, revenue models, and roadmap, positioning Gnos.ai as the forefront of AI-driven music innovation.
+## 1. Abstract
 
-## Introduction
+Gnos.ai is the world's first AI-driven decentralized music creation and social networking ecosystem fully deployed on a high-performance Layer-1 public blockchain. The platform's name is inspired by "Song" spelled backward as "Gnos," symbolizing a disruptive rethinking and reconstruction of the traditional centralized streaming monopoly model.
 
-### The Music Industry's Challenges
-The traditional music industry is plagued by barriers to entry, centralized control, and inequitable revenue distribution. Aspiring artists face high production costs, limited access to tools, and dependency on labels for promotion and monetization. Streaming platforms dominate, but payouts are minimal, and AI-generated music often lacks seamless integration into social and economic ecosystems. Moreover, intellectual property management remains fragmented, with creators struggling to protect and monetize their work in a digital age.
+At its core, Gnos.ai completely democratizes music production, distribution, and monetization through its cutting-edge multimodal generative AI engine, decentralized rights confirmation protocol, and "on-chain secondary creation (remix) revenue-sharing graph." Addressing the critical industry pain points of "AI Slop" proliferation and fraudulent streaming that dilute royalty pools, Gnos.ai pioneers the "12-Dimensional Acoustic Radar Evaluation System" to achieve value anchoring and anti-fraud blocking right from the source.
 
-### Gnos.ai's Vision
-Gnos.ai flips the script—literally and figuratively—by creating a decentralized, AI-centric platform where "gnos" symbolizes a backward glance at outdated models to forge a forward-thinking ecosystem. We envision a world where anyone can create professional-grade music using AI, collaborate socially, and earn fairly through blockchain-enabled NFTs and token rewards. By blending creativity, community, and crypto-economics, Gnos.ai empowers users to "earn while you create, listen, and share."
+As the underlying infrastructure, Gnos.ai fully embraces the **FullOn Network** ecosystem and adopts a pragmatic dual-token economic model: the governance token **GNOS** (with a total supply of 8 billion, never to be inflated) and the non-transferable high-frequency ecosystem utility credit **CISUM**. To establish a healthy, long-term deflationary value flywheel, 20% of the platform's total off-chain and on-chain comprehensive revenue will be automatically executed by smart contracts to buy back and burn GNOS.
 
-### Key Features
-- **AI Music Generation**: Intuitive tools for composing, mixing, and generating songs via AI algorithms.
-- **Social Integration**: Upload, share, and collaborate on tracks with built-in social feeds, likes, comments, and playlists.
-- **NFT Minting**: Convert songs into ERC-721 (unique) or ERC-1155 (multi-edition) NFTs for ownership and trading.
-- **Monetization Streams**: Diverse revenue sources for creators, including ads, rankings, and licensing.
-- **Governance and Rewards**: GNOS token for voting and staking; CISUM points for daily engagement.
+---
 
-## Product Architecture
+## 2. Introduction & Market Painpoints
 
-Gnos.ai is built on a modular, scalable architecture leveraging AI, blockchain, and cloud services to ensure seamless user experiences. The platform is divided into core components:
+### 2.1 Market Size & Paradigm Shift
 
-### 3.1 Frontend User Interface
-- **Web and Mobile Apps**: Responsive design using React.js for web and React Native for iOS/Android. Users access dashboards for creation, browsing, and social interactions.
-- **Music Player**: Embedded player with real-time lyric subtitles synced to audio playback. Supports high-quality streaming and offline downloads for premium users.
-- **Cover Art Integration**: Users upload or AI-generate images as song covers, stored on IPFS for decentralization.
+The global music industry is undergoing a profound technological revolution driven by the intersection of generative AI and Web3 technologies. In 2025, the global AI music generation market size reached $3.2 billion and is projected to skyrocket to $21.8 billion by 2034, representing a compound annual growth rate (CAGR) of 23.6%. However, existing traditional Web2 streaming platforms and first-generation Web3 music projects have exposed unresolvable structural flaws when capturing this historic incremental growth.
 
-### 3.2 AI Music Creation Tools
-- **Core Engine**: Powered by advanced AI models (e.g., similar to MusicGen or Stable Audio) for generating melodies, beats, vocals, and lyrics based on user prompts (e.g., "upbeat pop song about adventure").
-- **Customization**: Tools for editing AI outputs, adding effects, and collaborating in real-time sessions.
-- **Input/Output Handling**: Users upload pure AI-generated tracks or use platform tools. All uploads are verified for AI origin to maintain platform integrity.
+### 2.2 Core Pain Point Analysis
 
-### 3.3 Backend Services
-- **API Layer**: RESTful and GraphQL APIs for user authentication, content management, and real-time updates.
-- **Database**: Hybrid setup with PostgreSQL for structured data (user profiles, song metadata) and MongoDB for unstructured (comments, feeds).
-- **AI Processing**: Cloud-based GPUs for on-demand music generation, integrated with services like AWS SageMaker or custom ML pipelines.
-- **Social Features**: Feed algorithms prioritizing user engagement, AI-recommended collaborations, and community events.
+1. **The "Toolization" Dilemma and High User Churn Rates**: Leading Web2 platforms represented by Suno and Udio essentially remain at the stage of "standalone production tools." Due to the lack of endogenous social networks and high-stickiness interactive scenarios, user churn rates are extremely high once the novelty fades.
+2. **Proliferation of "AI Slop" and Malicious Royalty Dilution**: The democratization of AI creation thresholds has led to streaming platforms being swallowed by massive volumes of low-quality automated filler content. Statistics show that a mainstream streaming platform receives up to 75,000 new AI music uploads daily (accounting for 44%), but 85% of these are classified as malicious fraudulent streams aimed at diluting the royalty pool. This damages the interests of high-quality creators and creates a scenario where bad money drives out good.
+3. **Lagging Rights Confirmation and Neglected Secondary Creation Value**: The copyright boundaries of generative AI remain vague globally. The digital labor value of prompt engineers, models fine-tuners, and secondary creators (Remixers) lacks transparent quantification standards, making it difficult for them to receive fair royalty monetization.
+4. **Over-Financialization of Web3 Music (The Ponzi Dilemma)**: First-generation Web3 music projects (such as Audius, Royal) over-emphasized crude token speculation and NFT issuance detached from the essence of music. Lacking genuine streaming consumption support, these ecosystems easily fell into Ponzi traps.
 
-### 3.4 Blockchain Integration
-Gnos.ai's blockchain layer is fully deployed on **FullOn Network**, a high-performance Layer-1 blockchain designed for Web3 and AI ecosystems. FullOn achieves near-unlimited scalability through its unique 2D-Sharding and modular architecture, while maintaining low latency and high TPS (target exceeding 1 million TPS). This perfectly matches the real-time needs of music generation, NFT minting, instant revenue distribution, and high-concurrency social features.
+---
 
-- **Why FullOn Network**:
-  - **High Performance & Low Latency**: Multi-threaded + multi-sharding ensures near-instant song uploads, NFT minting, and TBA (ERC-6551 standard) account revenue settlement, delivering near Web2 user experience.
-  - **Ultra-Low Fees**: Extremely low gas costs (far below Ethereum mainnet and most L2s), ideal for micro-transactions such as point redemptions, frequent listening rewards, and virtual singer cultivation.
-  - **Multi-Chain Interoperability**: Native support for cross-chain bridges and interoperability protocols, allowing seamless interaction via mainstream wallets (MetaMask, WalletConnect, HuFu Wallet, etc.). Assets can be bridged to Ethereum, Solana, and other ecosystems for broader liquidity.
-  - **AI-Friendly**: Optimized for Web3 + AI scenarios, supporting efficient on-chain storage and computation for AI Agent data, enabling long-term virtual singer TBA NFT cultivation and revenue tracking.
+## 3. Product & Technical Architecture
 
-- **NFT Marketplace**: ERC-721 (unique songs/singers) and ERC-1155 (limited editions) minting via FullOn smart contracts. Audio files, lyrics, covers, and AI generation logs stored on IPFS/Arweave for decentralization and permanence.
-- **Smart Contracts**: Governance voting, automated revenue distribution (including TBA accounts), 20% platform revenue buyback & burn of GNOS, and AI upload verification on-chain proofs—all deployed on FullOn. Contracts are third-party audited.
-- **Wallet Integration**: Full support for native FullOn wallets (e.g., HuFu Wallet) and multi-chain wallets (MetaMask, WalletConnect, RWID phone-linked accounts). One-click network switching and cross-chain asset import/export.
+Gnos.ai adopts a modular, scalable Web2.5/Web3 hybrid architecture to ensure high-transparency on-chain rights confirmation while delivering a Web2-grade seamless user experience.
 
-This deployment significantly reduces operational costs, lowers user entry barriers, and reserves room for future expansions such as cross-chain music copyright markets.
+### 3.1 Core Component Design
 
-### 3.5 Security and Compliance
-- **Data Privacy**: GDPR-compliant, with user-controlled data sharing.
-- **Content Moderation**: AI-assisted review to prevent copyright infringement, ensuring all content is AI-generated or licensed.
-- **Scalability**: Microservices architecture on Kubernetes, with CDN for global content delivery.
+* **Omni-channel Frontend User Experience Gateway:** Supports Web and mobile (iOS/Android) native applications. Features built-in high-fidelity audio rendering engines, real-time multimodal media synchronization, and dynamic visual generation systems. It seamlessly integrates mainstream crypto wallet protocols to provide users with an immersive, minimalist creation and consumption interface.
+* **Multimodal AI Music Generation Engine:** Deeply integrates cutting-edge deep generative models and Large Language Models (LLMs) to construct a highly perceptive "Text-to-Audio" and "Text-to-Lyrics" generation matrix, achieving collaborative, on-demand creation of melodies, arrangements, vocals, and lyrics.
+* **Resilient Off-chain Microservice Cluster (Off-chain Backend):** Utilizes a loosely coupled distributed architecture to ensure high-concurrency off-chain core business responses:
+* **Stateless API Microservices:** Supports the platform's massive daily business requests and high-frequency social logic processing.
+* **Distributed Scheduling & Cron Jobs:** Responsible for large-scale, dynamic AI GPU computing resource allocation and automated rendering production pipelines.
+* **AI Agent Services Group:** Drives autonomous creation, copyright pre-audit, intelligent recommendations, and user interactions within the ecosystem.
+* **Audio/Video Streaming Cluster:** Provides high-bandwidth, low-latency global audio/video content delivery (CDN) and real-time streaming.
+* **Cloud Elastic Data Storage Architecture:** Merges highly reliable structured metadata storage with a distributed social data network to guarantee the security and high availability of data assets.
 
-### 3.6 User Flows
-- **Creator Flow**: Register → Generate/Upload Song → Add Cover & Lyrics → Mint NFT (optional) → Share & Earn.
-- **Listener Flow**: Browse/Listen → Earn CISUM → Invite Friends → Trade NFTs.
-- **Developer Flow**: Access API for secondary uses (e.g., remixing songs) with royalty payments.
 
-### 3.7 AI Agent and Virtual Singer Cultivation System
-Gnos.ai introduces an advanced AI Agent system that allows users to personally cultivate virtual music singers (Virtual Singers), expanding the platform's creative boundaries. This feature deeply integrates AI personalization with blockchain technology, enabling users to "raise" custom AI singer personas and manage ownership and revenue rights on-chain via Token Bound Account (TBA) NFTs.
+* **Self-Driven Decentralized Interactive Module (On-chain / Web3 Module):** The platform's core decentralized value layer, running independently of the off-chain microservices to ensure that core assets and transactions are decentralized:
+* **Core Smart Contract System:** Executes creator asset rights confirmation (NFT/SFT), on-chain automated revenue sharing, and decentralized settlement logic, triggered directly by user-side signatures.
+* **Blockchain Indexer Service:** An efficient on-chain event listening and data indexing service responsible for scanning blockchain transaction history in real-time, parsing contract logs, and synchronizing on-chain states to the off-chain cache to achieve "on-chain transaction, off-chain awareness."
 
-- **Core Mechanisms**:
-  - **Personalized Cultivation**: Users build virtual singers from scratch or preset templates through the AI Agent tool, defining music style, vocal characteristics, visual appearance, and backstory. Iterative training via prompts, sample uploads, and feedback refines the singer over time.
-  - **Social Interaction**: Virtual singers can post updates, collaborate on duets, and respond to user comments for immersive engagement.
-  - **TBA NFT Issuance**: Mature virtual singers can be minted as TBA NFTs. The NFT owns an independent on-chain wallet (Token Bound Account) that holds and receives revenue.
-    - **NFT Types**: ERC-721 (unique) or ERC-1155 (limited editions).
-    - **Minting**: Small GNOS or CISUM fee; metadata includes singer profile, voice model, song history, and cultivation data (IPFS-stored content hash & other meta data).
 
-- **Revenue Mechanism**:
-  - **Revenue Attribution**: All earnings from the virtual singer's songs, performances, or derivatives (ads, Top 100 fees, licensing) flow automatically to the TBA account.
-  - **Revenue Rights Transfer**: NFT trading transfers control of the TBA account and future revenue rights to the new owner.
-  - **Split**: Platform retains 10-20% fee; remainder (e.g., 70% of playback fees) goes directly to TBA. Users can withdraw funds anytime.
 
-- **Ecosystem Integration**: Cultivation consumes CISUM or GNOS; milestones reward extra CISUM. TBA NFT holders gain DAO voting power boosts.
+### 3.2 Technical Moat: "12-Dimensional Acoustic Radar" Evaluation System
 
-This positions Gnos.ai as a pioneer in AI + Web3 music, evolving users from creators to "virtual idol managers."
+To thoroughly intercept low-quality music bulk-generated by content farms from eroding the ecosystem, Gnos.ai deploys a decentralized AI Agent evaluation gateway. The system strictly compares and evaluates every generated UGC work across 12 critical acoustic dimensions, including **melody originality, rhythm fluency, emotional appeal, structural integrity, and timbre saturation**:
 
-### 3.8 AI Music Upload Verification Module
-To ensure content originality and legality, Gnos.ai implements an advanced AI-based upload verification system that scans every song before/after publication.
+* **Public Pool Admission Control**: Only works whose evaluation results meet specific quality thresholds (Grade A/B) are allowed to enter the public recommendation feed or be approved for NFT minting, blocking garbage spam at the source.
+* **Fair Value Anchoring**: The scoring system provides an absolute fair and quantifiable on-chain tracking benchmark for subsequent CISUM credit distribution and GNOS airdrops, ensuring incentive resources flow to premium creators.
 
-- **Detection Mechanisms**:
-  - AI generation fingerprint analysis (spectrum, rhythm, diffusion artifacts) with >98% target accuracy.
-  - Copyright matching against global audio fingerprint databases and third-party libraries.
-  - Multimodal checks: lyrics originality (NLP), cover hash, upload metadata.
-  - Workflow: Auto-scan on upload; approved songs receive "AI-Verified" badge and CISUM reward; rejected uploads return with suggestions.
+### 3.3 "Remix-to-Earn" Secondary Creation Graph
 
-- **Ecosystem Benefits**: Protects IP, enhances NFT value, and reinforces Gnos.ai as a clean AI music platform.
+Differing from traditional platforms' unidirectional generation, Gnos upgrades "Remixes" into a core social behavior. The platform confirms the rights of multi-track data from music source files and project files via SFTs. When User B remixes the work of Creator A and generates ecosystem revenue (from ads, charting, licensing), the smart contract automatically executes **on-chain programmable royalty sharing: splitting 30% of the revenue to the original Creator A in real-time**. This strong social chain locked by economic interests will vastly accelerate the viral social propagation of content.
 
-### 3.9 Intelligent Recommendation and Library Management System
-The backend features an AI-powered recommendation engine and automated tag-based library system to improve content discovery and retention.
+### 3.4 AI Agent & Virtual Singer Development System
 
-- **Recommendation Engine**:
-  - Personalized feeds using collaborative filtering + Transformer models based on listening history, tags, social activity, and AI Agent data.
-  - Real-time optimization from "earn while listening" behavior; integrates with Top 100 rankings.
+Gnos.ai allows users to customize and cultivate exclusive AI Virtual Singers from scratch or via templates. This feature elevates users from traditional creators to "virtual idol managers":
 
-- **Tag-Based Auto Library Categorization**:
-  - AI generates 5-10 tags per song (style, mood, elements, language).
-  - Dynamic libraries for search, filtering, and aggregation; tags enhance NFT metadata and third-party distribution.
-  - User feedback loop improves accuracy over time.
+* **ERC-6551 TBA Account Integration:** Matured virtual singers can be minted as Token Bound Account (TBA) NFTs. According to the ERC-6551 standard, **the NFT itself serves as an independent on-chain wallet**.
+* **Revenue & Asset Ownership:** All income generated by the virtual singer through performing songs, posting updates, and participating in duets (streaming fees, ad revenue splits, copyright licensing, etc.) will directly and automatically flow into this TBA wallet account. The platform takes a 10-20% platform fee for buyback and burn, while users can withdraw the remaining funds at any time.
+* **Transfer of Ownership & Revenue Rights:** When the NFT is traded on secondary markets, the buyer acquires the virtual singer’s "future revenue rights" along with its "historical training data (voice models, song histories, etc.)" stored on IPFS, achieving complete asset liquidity for virtual personas.
 
-These systems form Gnos.ai's intelligent core, driving quality, stickiness, and monetization.
+### 3.5 Underlying Blockchain Choice: FullOn Network
 
-## Tokenomics
+Gnos.ai’s Web3 core value layer is entirely built on the high-performance Layer-1 public blockchain, **FullOn Network**:
 
-### GNOS Governance Token
-- **Total Supply**: 8,000,000,000 GNOS (ERC-20 compatible, deployed on FullOn Network mainnet).
-- **Distribution**:
-  - Community Rewards and Airdrops: 35% – For Top 100 listening rewards, invitations, and CISUM conversions. Linear vesting over 4 years, prioritizing FullOn native users.
-  - Team and Advisors: 18% – Locked 2 years, then quarterly vesting.
-  - Liquidity and Exchanges: 20% – Deep pools on FullOn DEX and cross-chain LPs.
-  - Ecosystem Development Fund: 18% – FullOn-specific grants (bridges, integrations, AI tools). DAO-governed.
-  - Marketing and Partnerships: 9% – Leveraging FullOn multi-chain interoperability.
+* **High Performance & Near-Instant Settlement:** Utilizing a DPOS + multi-threading architecture, it ensures that song asset registration, NFT minting, and TBA account revenue distribution are completed near-instantaneously, aligning the experience with Web2.
+* **Seamless Web2 User Onboarding (RWID):** Natively supports direct blockchain account generation bound to mobile phone numbers via RWID. Paired with relayers, it provides a gasless experience, eliminating traditional Web3 user entry barriers.
+* **Ultra-low Micro-transaction Costs:** Offers extremely low single-transaction gas fees (far lower than the Ethereum mainnet and most L2s), perfectly accommodating ultra-high-frequency micro-transactions like credit redemptions and Listen-to-Earn rewards.
+* **AI-Friendly Architecture:** Specifically optimized for Web3+AI collaboration, supporting efficient on-chain AI Agent data storage and state tracking.
 
-- **Utility**:
-  - Governance: Staking on FullOn for DAO voting (upgrades, fees, cross-chain proposals).
-  - Rewards: Earned via invitations and rebates; multi-chain migration bonuses.
-  - Buyback and Burn: 20% of platform revenues automatically repurchased and burned on FullOn.
+---
 
-- **Inflation/Deflation**: No new minting; deflationary via burns. Cross-chain bridging incentives (2% from ecosystem fund).
+## 4. Tokenomics
 
-### Token Release Schedule
-The release curve promotes long-term alignment with gradual supply increase and counteracting burns.
+Gnos.ai adopts a dual-token system consisting of a "high-frequency daily ecosystem credit (CISUM) + long-term governance deflationary token (GNOS)," perfectly balancing the high-frequency interaction demands of the platform with long-term asset value anchoring.
 
-| Quarter | Community     | Team          | Liquidity     | Ecosystem     | Marketing     | Total Circulating |
-|---------|---------------|---------------|---------------|---------------|---------------|-------------------|
-| 0       | 0             | 0             | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 3,760,000,000     |
-| 1       | 175,000,000   | 0             | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 3,935,000,000     |
-| 2       | 350,000,000   | 0             | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 4,110,000,000     |
-| 3       | 525,000,000   | 0             | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 4,285,000,000     |
-| 4       | 700,000,000   | 0             | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 4,460,000,000     |
-| 5       | 875,000,000   | 0             | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 4,635,000,000     |
-| 6       | 1,050,000,000 | 0             | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 4,810,000,000     |
-| 7       | 1,225,000,000 | 0             | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 4,985,000,000     |
-| 8       | 1,400,000,000 | 0             | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 5,160,000,000     |
-| 9       | 1,575,000,000 | 180,000,000   | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 5,515,000,000     |
-| 10      | 1,750,000,000 | 360,000,000   | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 5,870,000,000     |
-| 11      | 1,925,000,000 | 540,000,000   | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 6,225,000,000     |
-| 12      | 2,100,000,000 | 720,000,000   | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 6,580,000,000     |
-| 13      | 2,275,000,000 | 900,000,000   | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 6,935,000,000     |
-| 14      | 2,450,000,000 | 1,080,000,000 | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 7,290,000,000     |
-| 15      | 2,625,000,000 | 1,260,000,000 | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 7,645,000,000     |
-| 16      | 2,800,000,000 | 1,440,000,000 | 1,600,000,000 | 1,440,000,000 | 720,000,000   | 8,000,000,000     |
+### 4.1 GNOS Governance Token Allocation
+
+* **Total Supply**: 8,000,000,000 GNOS (never to be inflated).
+* **Core Utility**: DAO governance voting (proposals, fine-tuning revenue-sharing parameters), core asset staking rewards, ad placement, and premium ecosystem computing power payments.
+* **Token Allocation Structure Table**:
+
+| Allocation Category | Percentage | Amount (Tokens) | Lock-up & Release Schedule |
+| --- | --- | --- | --- |
+| **Seed Round Investors** | 10% | 800,000,000 | 10% unlocked at launch, followed by a 6-month cliff, and then linear quarterly release over the subsequent 12 months. |
+| **Team & Advisors** | 15% | 1,200,000,000 | 12-month lock-up, followed by linear quarterly release over the subsequent 24 months. |
+| **Ecosystem Incentives Pool** | 40% | 3,200,000,000 | 15% released at TGE for initial liquidity and airdrops; the remaining 85% is released linearly as needed over 16 quarters (for creator/listener incentives). |
+| **Community Governance (DAO)** | 15% | 1,200,000,000 | Locked until DAO governance functionalities go live (estimated Q4), then released over 12 quarters based on community proposals. |
+| **Liquidity Reserve** | 10% | 800,000,000 | 50% unlocked at TGE for DEX/CEX market-making support; the remaining 50% is gradually released over the first 4 quarters. |
+| **Future Fundraising Reserve** | 10% | 800,000,000 | Locked until the launch of Strategic Series A fundraising (estimated Q3-Q4), released according to financing agreements. |
+
+### 4.2 GNOS Token Release Schedule (Cumulative by Quarter)
+
+The following table outlines the cumulative unlocked circulating supply (in tokens) across different sectors over the first 4 years (16 quarters), accurately matching the allocation logic in section 4.1:
+
+| Quarter | Seed Round (Cum.) | Team & Advisors (Cum.) | Ecosystem Incentives (Cum.) | Community Governance DAO (Cum.) | Liquidity Reserve (Cum.) | Future Financing Reserve (Cum.) | **Total Circulating Supply (Cum.)** |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **TGE** | 80,000,000 | 0 | 480,000,000 | 0 | 400,000,000 | 0 | **960,000,000** |
+| **Q1** | 80,000,000 | 0 | 650,000,000 | 0 | 500,000,000 | 0 | **1,230,000,000** |
+| **Q2** | 80,000,000 | 0 | 820,000,000 | 0 | 600,000,000 | 0 | **1,500,000,000** |
+| **Q3** | 260,000,000 | 0 | 990,000,000 | 0 | 700,000,000 | 200,000,000 | **2,150,000,000** |
+| **Q4** | 440,000,000 | 0 | 1,160,000,000 | 100,000,000 | 800,000,000 | 400,000,000 | **2,900,000,000** |
+| **Q5** | 620,000,000 | 150,000,000 | 1,330,000,000 | 200,000,000 | 800,000,000 | 600,000,000 | **3,700,000,000** |
+| **Q6** | 800,000,000 | 300,000,000 | 1,500,000,000 | 300,000,000 | 800,000,000 | 800,000,000 | **4,500,000,000** |
+| **Q7** | 800,000,000 | 450,000,000 | 1,670,000,000 | 400,000,000 | 800,000,000 | 800,000,000 | **4,920,000,000** |
+| **Q8** | 800,000,000 | 600,000,000 | 1,840,000,000 | 500,000,000 | 800,000,000 | 800,000,000 | **5,340,000,000** |
+| **Q9** | 800,000,000 | 750,000,000 | 2,010,000,000 | 600,000,000 | 800,000,000 | 800,000,000 | **5,760,000,000** |
+| **Q10** | 800,000,000 | 900,000,000 | 2,180,000,000 | 700,000,000 | 800,000,000 | 800,000,000 | **6,180,000,000** |
+| **Q11** | 800,000,000 | 1,050,000,000 | 2,350,000,000 | 800,000,000 | 800,000,000 | 800,000,000 | **6,600,000,000** |
+| **Q12** | 800,000,000 | 1,200,000,000 | 2,520,000,000 | 900,000,000 | 800,000,000 | 800,000,000 | **7,020,000,000** |
+| **Q13** | 800,000,000 | 1,200,000,000 | 2,690,000,000 | 1,000,000,000 | 800,000,000 | 800,000,000 | **7,290,000,000** |
+| **Q14** | 800,000,000 | 1,200,000,000 | 2,860,000,000 | 1,100,000,000 | 800,000,000 | 800,000,000 | **7,560,000,000** |
+| **Q15** | 800,000,000 | 1,200,000,000 | 3,030,000,000 | 1,200,000,000 | 800,000,000 | 800,000,000 | **7,830,000,000** |
+| **Q16** | 800,000,000 | 1,200,000,000 | 3,200,000,000 | 1,200,000,000 | 800,000,000 | 800,000,000 | **8,000,000,000** |
+
+*(Note: The total circulating supply listed above represents the nominal upper cap prior to deducting the 20% platform revenue buyback and burn. Due to the deflationary mechanics, the actual circulating supply will be significantly lower than this curve.)*
 
 <div align="center">
 <img src="./assets/gnos_circulating_schedule.png" width=80%> <br>
-Figure-1: GNOS Circulating Schedule
+Digram 1：GNOS Circulation Schedule
 </div>
 
-### CISUM Points System
-- **Non-Transferable Utility Token**: Earned through daily platform activities.
-- **Earning Mechanisms**:
-  - Creation: Points for uploading verified AI songs.
-  - Listening: "Earn while you listen" – proportional to playtime.
-  - Social: Likes, shares, comments, and other engagement.
-- **Utility**: Redeem for premium AI tools, exclusive events, or convert to GNOS at set milestones.
-- **Supply**: Uncapped but algorithmically controlled with periodic burns to maintain balance.
+### 4.3 CISUM Credit System
 
-### Economic Model
-The dual-token flywheel: CISUM drives daily engagement and micro-interactions; GNOS provides long-term governance and value accrual. Deflationary pressure from GNOS burns supports sustainable growth.
-
-## Funding Plan
-
-To support FullOn Network deployment and ecosystem expansion, Gnos.ai adopts a staged fundraising approach targeting a total of $50 million across rounds, combining GNOS tokens and equity.
-
-- **Seed Round**: Target $10 million (2026 Q4). Investors receive 5% GNOS allocation (from ecosystem fund), 1-year lock. Funds for FullOn mainnet launch, AI verification, and wallet integrations.
-- **Series A**: Target $20 million (2027 Q4). Investors receive 8% GNOS (2-year vesting). Focus on mobile apps, cross-chain bridges, and marketing.
-- **Series B and Beyond**: Target $20 million+ (2028+). Remaining ecosystem fund allocation for global scaling, advanced TBA features, and cross-chain partnerships.
-
-- **Mechanisms**:
-  - Early investor GNOS discounts (20-30%).
-  - Fund allocation: 30% FullOn infrastructure, 20% cross-chain development, remainder operations and community.
-  - Investor GNOS requires minimum 6-month staking for DAO participation.
-  - Compliance: Global regulations (SEC/KYC); transparent via FullOn framework. Investments carry risk.
-
-## Revenue Models
-
-### For Creators
-- Platform advertising revenue share.
-- NFT secondary sale royalties (5-10% perpetual).
-- Top 100 playback fees (70% to creator).
-- Third-party syndication and library inclusion revenue.
-- Secondary usage/licensing fees.
-- Additional streams (crowdfunding, fan support).
-
-### For the Platform
-- Advertising revenue.
-- NFT minting and trading fees (2-5%).
-- Third-party upload commissions.
-- Top 100 playback fee share (30%).
-- Secondary usage fee share (20%).
-- Premium features, API access, sponsorships.
-
-20% of all platform revenue funds GNOS buyback and burn.
-
-### For Users
-- Earn CISUM through listening, curation, and engagement.
-- Invitation rewards in GNOS and CISUM (RWID phone verification).
-- Consumption rebates in GNOS.
-- Staking GNOS for yield from platform revenue.
+* **Non-Transferable Utility Credit:** Serves as the lifeblood for high-frequency consumption, micro-transactions, and incentives within the ecosystem.
+* **Multi-channel Earning Mechanics (Earn):**
+* **Creation Incentives:** High-quality works uploaded and verified through the "12-Dimensional Acoustic Radar System" receive credit rewards.
+* **Listen-to-Earn:** Listeners accrue corresponding credits based on actual effective streaming duration and interaction frequencies.
+* **Curation & Socializing:** Premium playlist curation, liking, sharing, and featured comments activate social contribution rewards.
 
 
-## Roadmap
+* **High-frequency Consumption (Sink):** Spent on redeeming advanced AI music/lyrics generation computing power, purchasing upgrade/nurturing materials for virtual singers, and charting to boost virtual idols. At specific ecosystem milestones, the platform will open limited channels allowing the redemption of CISUM for GNOS incentives at fixed ratios.
+* **Supply Control:** Algorithms dynamically adjust the emission slope and implement real-time burns alongside high-frequency interactions to maintain commodity price stability within the ecosystem.
 
-### 2026 Q1 – 2026 Q2  Genesis Phase
-- Closed beta and creator invitation program.
-- Core AI music generation tool V1 launch.
-- GNOS token and core contracts deployed & audited on FullOn Network.
-- ERC-721/1155 NFT minting and basic marketplace.
-- RWID phone verification + invitation system.
-- Initial CISUM mining and "earn while listening" campaigns.
-- Multi-chain wallet integration.
-- Seed round funding and FullOn deployment.
+### 4.4 Value Capture & Deflationary Flywheel
 
-### 2026 Q3 – 2026 Q4  Ignition Phase
-- Public registration and mobile apps (iOS & Android) launch.
-- Top 100 paid preview mechanism (charge after 10 seconds).
-- Third-party platform syndication preparation.
-- GNOS governance DAO activation.
-- 20% revenue auto buyback & burn implementation.
-- Initial brand ads and sponsorships.
-- Basic AI Agent cultivation tool (virtual singer V1).
-- AI upload verification V1 and basic recommendation engine.
-- Series A funding for cross-chain integration.
+The underlying tokenomic value of Gnos.ai is safeguarded by an "on-chain automated deflation protocol." **20% of all comprehensive platform revenue (including but not limited to B-side brand advertising fees, NFT transaction royalties, virtual idol tipping cuts, and global secondary copyright licensing fees) must be automatically swapped for GNOS on the FullOn chain via smart contracts and permanently burned on-chain**. As the user base expands and commercial monetization deepens, the absolute circulating supply of GNOS will continuously deflate, achieving long-term intrinsic value accumulation for the digital asset.
 
-### 2027 Q1 – 2027 Q4  Expansion Phase
-- Advanced AI tools: real-time collaboration, voice cloning, emotion control.
-- Secondary creation and sampling licensing market.
-- Deep integration with major NFT marketplaces.
-- GNOS staking and liquidity mining.
-- Full multi-chain support.
-- First Gnos Creator Awards.
-- TBA NFT launch: virtual singer minting, revenue binding, trading.
-- Advanced AI Agent features (3D visuals, social modules).
-- FullOn cross-chain interoperability with Ethereum/Solana etc.
-- Enhanced tag library and personalized recommendations.
+---
 
-### 2028 and Beyond  Ecosystem Maturity Phase
-- Establish global AI-native music creation standard.
-- Launch Gnos Protocol for open integration.
-- Achieve sustainable deflationary model for GNOS.
-- On-chain music copyright registration and automated global revenue distribution.
-- Evolve into foundational infrastructure for AI-generated music creation and consumption.
+## 5. Fundraising & Budget
 
-**Note**: The roadmap is subject to dynamic adjustment based on market feedback, technical progress, regulation, and community governance. User value and creator earnings remain the core decision drivers.
+### 5.1 Seed Round Fundraising Overview
 
-## Risks and Disclaimers
+* **Fundraising Instrument**: Token Sale (SAFT / Token Sale).
+* **Historical Team Self-Funded Capital**: $100,000 (Completed the baseline multimodal AI engine implementation and the development of the core Android client).
+* **Target Funding for This Round**: **$400,000 (Seed Round)**.
+* **Fully Diluted Valuation (FDV)**: **$4,000,000**.
+* **Token Unit Price**: **$0.0005 / GNOS**.
 
-- **Market Risks**: Cryptocurrency volatility; GNOS value may fluctuate.
-- **Regulatory Risks**: Compliance with evolving laws on AI, NFTs, and music rights.
-- **Technical Risks**: Potential bugs in AI or blockchain; mitigated by audits.
-- **No Guarantees**: This whitepaper is for informational purposes only. Investments involve risk. Consult professionals.
+### 5.2 Allocation of Funds (Next 12 Months)
 
-Gnos.ai invites creators, listeners, and innovators to join the revolution. Visit gnos.ai or follow our updates for more.
+* **Marketing & Global Growth (45% / $180,000)**: Partner with a matrix of over 100 top Web3 / AI music influencers for targeted traffic acquisition, and launch the global #AIHitSong music challenge on TikTok/X.
+* **Core Product & Frontier R&D (30% / $120,000)**: Finalize the development of the Remix on-chain revenue sharing engine, achieve compliant listing on the Apple iOS App Store, and develop social gameplay for digital music assets (SFT) based on mystery box mechanics.
+* **Content Ecosystem & Artist Onboarding Operations (15% / $60,000)**: Leverage the Cisumverse resource package to fully subsidize core artist onboardings, and establish an open incentive pool for prompt engineer creators.
+* **Legal Compliance & Computing Power Reserve (10% / $40,000)**: Implement comprehensive GDPR international data privacy compliance certification, establish a 48-hour emergency takedown response mechanism for copyright disputes, and hedge against sudden spikes in server bandwidth and GPU computing costs.
+
+---
+
+## 6. Roadmap & Milestones
+
+### 6.1 Month 1 - 3 (Ecosystem Cold Launch Phase)
+
+* Complete the full launch of the native iOS version, and implement the on-chain leaderboard and Web3 social comment gateway.
+* **Leverage the strategic partner Cisumverse ecosystem (drawing on 20,000+ active registered users accumulated by the brother app CisuMusiC, alongside signed Asian pioneer bands such as 2Z and H3F) for precise fan traffic redirection, bridging the growth corridor from Web2 to Web3.**
+* **Milestone Targets**: Acquire 50,000+ real registered users, and accumulate 10,000 UGC high-quality AI music works rated Grade B or above by the acoustic radar system.
+
+### 6.2 Month 4 - 12 (Growth Explosion Phase)
+
+* Fully launch the "Remix-to-Earn" secondary creation graph mechanism, opening up crowd-sourced playlist curation and prompt collaboration relay gameplay.
+* Upgrade the "12-Dimensional Acoustic Radar System" to V2, strengthening defenses against on-chain sybil/wash streaming and multimodal copyright plagiarism.
+* **Milestone Targets**: Cross the threshold of 300,000 registered users, with a monthly average production of 80,000 high-quality UGC songs. **Simultaneously kick off Series A strategic financing, benchmarking against tier-one Web3 projects in the same track, with an anticipated FDV premium scaling to the $30M - $60M range.**
+
+### 6.3 Month 13+ (Monetization Landing & Ecosystem Prosperity Phase)
+
+* Fully open cross-chain NFT minting, secondary market trading, and multi-chain distribution support for Grade A/B high-scoring music works.
+* Formally initiate the complete transfer of ownership for advanced AI Agent virtual singers, integrated with automated revenue binding via ERC-6551 TBA accounts to foster a virtual idol manager ecosystem.
+* Activate network-wide decentralized governance (DAO) for GNOS, enabling on-chain voting governance and long-term staking dividend mechanisms.
+* **Milestone Targets**: Reach 700,000+ Monthly Active Users (MAU), and break through $1.2 million in platform-wide annual total comprehensive revenue.
+
+---
+
+## 7. Risks & Disclaimers
+
+* **Technical, Computing Power, and Algorithmic Evolution Risks**: The underlying technology in the AI domain iterates extremely rapidly. Massive fluctuations in GPU computing costs, as well as unknown security vulnerabilities or hacker attacks on blockchain smart contracts, may negatively impact the system.
+* **Tokenomics Game-Theoretic Risks**: Crypto assets possess high inherent volatility. The redemption curves and burn efficiencies between daily CISUM credits and the governance token GNOS may face macro dynamic regulatory adjustments under heavy concurrent loads.
+* **Global Legal and Regulatory Compliance Risks**: Highly uncertain evolutions exist regarding generative AI training dataset copyright ownership, securitization definitions of decentralized tokens, and compliance privacy regulatory policies across different jurisdictions globally.
+* **No Investment Solicitation Guarantee**: All contents in this whitepaper are intended solely for project vision, technical design, and information transmission purposes, and do not constitute an offer of securities, solicitation of investment, or a prospectus in any jurisdiction. Investing in digital assets carries risks of principal loss, and participants must possess full legal capacity and risk tolerance.
+
+---
+
+Gnos.ai invites creators, listeners, and innovators to join this revolution. Visit [https://gnos.ai](https://gnos.ai) or follow our updates for more information.
