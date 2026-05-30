@@ -1,7 +1,3 @@
-以下是为您翻译的 Gnos.ai 白皮书 `v0.5.0` 英文版 Markdown 文本。翻译保留了全部结构、专业术语（如 SFT, ERC-6551, TBA, RWID 等）以及表格和图注格式。
-
----
-
 # Gnos.ai Whitepaper `v0.5.0`
 
 ## 1. Abstract
