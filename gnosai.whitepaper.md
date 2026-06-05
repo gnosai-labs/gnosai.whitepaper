@@ -89,9 +89,9 @@ Gnos.ai adopts a dual-token system consisting of a "high-frequency daily ecosyst
 
 | Allocation Category | Percentage | Amount (Tokens) | Lock-up & Release Schedule |
 | --- | --- | --- | --- |
-| **Seed Round Investors** | 10% | 800,000,000 | 10% unlocked at launch, followed by a 6-month cliff, and then linear quarterly release over the subsequent 12 months. |
-| **Team & Advisors** | 15% | 1,200,000,000 | 12-month lock-up, followed by linear quarterly release over the subsequent 24 months. |
-| **Ecosystem Incentives Pool** | 40% | 3,200,000,000 | 15% released at TGE for initial liquidity and airdrops; the remaining 85% is released linearly as needed over 16 quarters (for creator/listener incentives). |
+| **Seed Round Investors** | 10% | 800,000,000 | 10% unlocked at launch, followed by a 6-month cliff, and then daily linear release over the subsequent 12 months. |
+| **Team & Advisors** | 15% | 1,200,000,000 | 12-month lock-up, followed by daily linear release over the subsequent 24 months. |
+| **Ecosystem Incentives Pool** | 40% | 3,200,000,000 | 15% released at TGE for initial liquidity and airdrops; the remaining 85% is released linearly as needed over 16 quarters on a daily basis (for creator/listener incentives). |
 | **Community Governance (DAO)** | 15% | 1,200,000,000 | Locked until DAO governance functionalities go live (estimated Q4), then released over 12 quarters based on community proposals. |
 | **Liquidity Reserve** | 10% | 800,000,000 | 50% unlocked at TGE for DEX/CEX market-making support; the remaining 50% is gradually released over the first 4 quarters. |
 | **Future Fundraising Reserve** | 10% | 800,000,000 | Locked until the launch of Strategic Series A fundraising (estimated Q3-Q4), released according to financing agreements. |
@@ -143,6 +143,18 @@ Digram 1：GNOS Circulation Schedule
 
 The underlying tokenomic value of Gnos.ai is safeguarded by an "on-chain automated deflation protocol." **20% of all comprehensive platform revenue (including but not limited to B-side brand advertising fees, NFT transaction royalties, virtual idol tipping cuts, and global secondary copyright licensing fees) must be automatically swapped for GNOS on the FullOn chain via smart contracts and permanently burned on-chain**. As the user base expands and commercial monetization deepens, the absolute circulating supply of GNOS will continuously deflate, achieving long-term intrinsic value accumulation for the digital asset.
 
+**Why GNOS Gains Value**
+
+GNOS's intrinsic value is driven by a combination of on-chain demand and off-chain commercial revenue, primarily sourced from:
+
+1. **User Growth & Network Effects**: Sustained active user growth generates more advertising revenue, brand partnerships, and referral income, amplifying platform-wide revenue and increasing demand and usage of GNOS.
+2. **Value from High-Quality Content**: Premium creations that are licensed or republished by other platforms or institutions generate copyright and licensing income that flows back to the platform, strengthening GNOS-backed economic distributions.
+3. **Web3 Transactions & On-chain Economic Activity**: Ongoing on-chain activity—NFT/SFT trades, virtual singer transactions, and royalty settlements—creates continuous transaction fees and liquidity premiums that directly fuel GNOS demand.
+4. **Platform Operations & Commercial Initiatives**: Paid events, brand collaborations, licensing deals, advertising, and premium charting generate recurring enterprise revenue that can be used for buybacks, burns, or ecosystem incentives, reinforcing token value.
+5. **Paid Power-Users & Compute Subscriptions**: Loyal users subscribing for premium generation compute, custom services, or membership create predictable recurring revenue that underpins GNOS's long-term intrinsic value.
+
+In short, GNOS value appreciation stems from multiple sustainable revenue and demand channels; the platform will allocate a portion of these revenues to on-chain buybacks and burns, producing a dual effect of rising demand and ongoing supply reduction to support long-term value accumulation.
+
 ---
 
 ## 5. Fundraising & Budget
@@ -158,7 +170,7 @@ The underlying tokenomic value of Gnos.ai is safeguarded by an "on-chain automat
 ### 5.2 Allocation of Funds (Next 12 Months)
 
 * **Marketing & Global Growth (45% / $180,000)**: Partner with a matrix of over 100 top Web3 / AI music influencers for targeted traffic acquisition, and launch the global #AIHitSong music challenge on TikTok/X.
-* **Core Product & Frontier R&D (30% / $120,000)**: Finalize the development of the Remix on-chain revenue sharing engine, achieve compliant listing on the Apple iOS App Store, and develop social gameplay for digital music assets (SFT) based on mystery box mechanics.
+* **Core Product & Frontier R&D (30% / $120,000)**: Finalize the development of the Remix on-chain revenue sharing engine, achieve compliant listing on the Apple iOS App Store, and develop social gameplay for digital music assets (SFT) based on mystery box mechanics, as well as server operations and AI Token compute costs.
 * **Content Ecosystem & Artist Onboarding Operations (15% / $60,000)**: Leverage the Cisumverse resource package to fully subsidize core artist onboardings, and establish an open incentive pool for prompt engineer creators.
 * **Legal Compliance & Computing Power Reserve (10% / $40,000)**: Implement comprehensive GDPR international data privacy compliance certification, establish a 48-hour emergency takedown response mechanism for copyright disputes, and hedge against sudden spikes in server bandwidth and GPU computing costs.
 
